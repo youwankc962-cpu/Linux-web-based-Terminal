@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Command Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><strong>Linux Command Simulator</strong></div>
+      <div class="actions">
+        <button id="clearBtn">Clear</button>
+        <button id="resetBtn">Reset FS</button>
+        <button id="helpBtn">Help</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="terminal-panel">
+        <div id="terminal" class="terminal" tabindex="0" aria-label="Linux terminal"></div>
+        <div class="input-row">
+          <span id="prompt" class="prompt"></span>
+          <input id="commandInput" autocomplete="off" spellcheck="false" autofocus aria-label="Command input">
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <h2>Supported Commands</h2>
+        <div class="command-list" id="commandList"></div>
+        <div class="tip">
+          <strong>Tips</strong>
+          <p>Use ↑ / ↓ for command history.</p>
+          <p>Try <code>help</code> to see command usage.</p>
+          <p>This is a safe virtual Linux filesystem; it does not execute real OS commands.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
